@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+
 <config>
+
     <modules>
-        <pig_buy>
+    
+        <App_Configviewer>
             <active>true</active>
             <codePool>local</codePool>
-        </pig_buy>
+        </App_Configviewer>
+    
     </modules>
+
 </config>

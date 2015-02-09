@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<config>
+
+    <modules>
+        <App_Configviewer>
+            <version>0.1.0</version>
+        </App_Configviewer>
+    </modules>
+    
+    <global>
+        <events>
+            <controller_front_init_routers>
+                <observers>
+                    <app_configviewer_model_observer>
+                        <type>singleton</type>
+                        <class>App_Configviewer_Model_Observer</class>
+                        <method>checkForConfigRequest</method>
+                    </app_configviewer_model_observer>
+                </observers>
+            </controller_front_init_routers>
+        </events>
+    </global>
+</config>
