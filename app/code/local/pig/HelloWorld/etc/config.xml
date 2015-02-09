@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+    <modules>
+        <pig_HelloWorld>
+            <version>0.1.0</version>
+        </pig_HelloWorld>
+    </modules>
+ 
+    
+    <frontend>
+        <routers>
+            <helloworld>
+                <use>standard</use>
+                <args>
+                    <module>pig_HelloWorld</module>
+                    <frontName>helloworld</frontName>
+                </args>
+            </helloworld>
+        </routers>
+    </frontend>
+    
+    <global>
+        <models>
+            <helloworld>
+                <class>pig_HelloWorld_Model</class>
+                <resourceModel>helloworld_mysql4</resourceModel>
+            </helloworld>
+            
+            <helloworld_mysql4>
+                <class>pig_HelloWorld_Model_Resource_Mysql4</class>
+                
+                <entities>
+                    <blogpost>
+                    <table>blog_posts</table>
+                    </blogpost>
+                </entities>
+            </helloworld_mysql4>
+        </models>
+        
+        
+        <resources>
+            <helloworld_write>
+                <connection>
+                    <use>default_write</use>
+                </connection>
+            </helloworld_write>
+            <helloworld_read>
+                <connection>
+                    <use>default_read</use>
+                </connection>
+            </helloworld_read>
+        </resources>
+    </global>
+</config>
+
+
+
+
+
