@@ -21,4 +21,13 @@
          </routers>
     </frontend>
 
+    <global>
+        <models>
+            <helloworld>
+                <class>App_Helloworld_Model</class>
+                <resourcemodel>helloworld_mysql4</resourcemodel>
+            </helloworld>
+        </models>
+    </global>
+
 </config>
