@@ -18,4 +18,27 @@ class App_Helloworld_BlogController extends Mage_Core_Controller_Front_Action {
          var_dump ( $data );
         echo "end.";
     }
+    
+    public  function showAllBlogsAction()
+    {
+        Mage::log("in ".__FUNCTION__);
+        $mdc = Mage::getModel("helloworld/blogpost")->getCollection();
+        echo "<table>";
+        foreach($mdc as $md)
+        {
+            echo "<tr>";
+            echo "<td>".$md->getId()."</td>";
+            echo "<td>".$md->getTitle()."</td>";
+            echo "<td>".$md->getPost()."</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+    }
 }
+
+
+
+
+
+
+
