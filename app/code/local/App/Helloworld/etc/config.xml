@@ -2,32 +2,65 @@
 
 <config>
 
-    <modules>
-        <App_Helloworld>
-            <version>0.1.0</version>
-            
-        </App_Helloworld>
-    </modules>
-    
-    <frontend>
-         <routers>
-             <helloworld>
-                 <use>standard</use>
-                 <args>
-                     <module>App_Helloworld</module>
-                     <frontName>helloworld</frontName>
-                 </args>
-             </helloworld>
-         </routers>
-    </frontend>
+	<modules>
+		<App_Helloworld>
+			<version>0.1.0</version>
 
-    <global>
-        <models>
-            <helloworld>
-                <class>App_Helloworld_Model</class>
-                <resourcemodel>helloworld_mysql4</resourcemodel>
-            </helloworld>
-        </models>
-    </global>
+		</App_Helloworld>
+	</modules>
+
+	<frontend>
+		<routers>
+			<helloworld>
+				<use>standard</use>
+				<args>
+					<module>App_Helloworld</module>
+					<frontName>helloworld</frontName>
+				</args>
+			</helloworld>
+		</routers>
+	</frontend>
+
+	<global>
+
+		<models>
+			<helloworld>
+				<class>App_Helloworld_Model</class>
+				<resourceModel>helloworld_mysql4</resourceModel>
+			</helloworld>
+
+			<helloworld_mysql4>
+				<class>App_Helloworld_Model_Resource_Mysql4</class>
+
+				<entities>
+					<blogpost>
+						<table>blog_posts</table>
+					</blogpost>
+				</entities>
+			</helloworld_mysql4>
+
+		</models>
+
+		<resources>
+			<helloworld_write>
+				<connection>
+					<use>default_write</use>
+				</connection>
+			</helloworld_write>
+			<helloworld_read>
+				<connection>
+					<use>default_read</use>
+				</connection>
+			</helloworld_read>
+		</resources>
+
+	</global>
+
+
+
 
 </config>
+
+
+
+

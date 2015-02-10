@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<config>
+
+    <modules>
+        <App_User>
+             <active>true</active>
+             <codePool>local</codePool>
+        </App_User>
+    
+    </modules>
+
+</config>
