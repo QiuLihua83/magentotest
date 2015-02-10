@@ -62,6 +62,12 @@
 				</connection>
 			</helloworld_read>
 		</resources>
+		
+		<helpers>
+		    <helloworld>
+		        <class>App_Helloworld_Helper</class>
+		    </helloworld>
+		</helpers>
 
 	</global>
 
