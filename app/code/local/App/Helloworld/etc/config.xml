@@ -42,6 +42,15 @@
 		</models>
 
 		<resources>
+		    <helloworld_setup>
+		        <setup>
+		            <module>App_Helloworld</module>
+		            <class>App_Helloworld_Model_Setup_Mysql4_Setup</class>
+		        </setup>
+		        <connection>
+		            <use>core_setup</use>
+		        </connection>
+		    </helloworld_setup>
 			<helloworld_write>
 				<connection>
 					<use>default_write</use>
