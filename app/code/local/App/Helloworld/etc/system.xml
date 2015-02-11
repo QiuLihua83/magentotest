@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <config>
-    <tabs>
-        <helloconfig translate="label" module='helloworld'>
-            <label>测试标签 </label>
-            <sort_order>9999999999</sort_order>
-        </helloconfig>
-    </tabs>
-    
-    <sections>
-        <helloworld_options translate="label"  module="helloworld"> 
-            <label >测试段1</label> 
-            <tab>helloconfig</tab> 
-            <frontend_type>text</frontend_type>
-            <sort_order>100000000000</sort_order> 
-            <show_in_default>1</show_in_default>
-            <show_in_website>1</show_in_website> <show_in_store>1</show_in_store>
-         </helloworld_options>
-    </sections>
+	<tabs>
+		<helloconfig translate="label" module='helloworld'>
+			<label>测试标签 </label>
+			<sort_order>99999999</sort_order>
+		</helloconfig>
+	</tabs>
+
+	<sections>
+		<helloworld_options translate="label" module="helloworld">
+			<label>测试段1</label>
+			<tab>helloconfig</tab>
+			<frontend_type>text</frontend_type>
+			<sort_order>100000</sort_order>
+			<show_in_default>1</show_in_default>
+			<show_in_website>1</show_in_website>
+			<show_in_store>1</show_in_store>
+			
+			<groups>
+				<messages translate="label">
+					<label>测试组test</label>
+					<frontend_type>text</frontend_type>
+					<sort_order>5</sort_order>
+					<show_in_default>1</show_in_default>
+					<show_in_website>1</show_in_website>
+					<show_in_store>1</show_in_store>
+				
+					<fields>
+						<hello_message>
+							<label>测试区域test</label>
+							<frontend_type>text</frontend_type>
+							<sort_order>1</sort_order>
+							<show_in_default>1</show_in_default>
+							<show_in_website>1</show_in_website>
+							<show_in_store>1</show_in_store>
+						</hello_message>
+					</fields>
+				</messages>
+			</groups>
+		</helloworld_options>
+
+	</sections>
 </config>
