@@ -20,8 +20,8 @@ class App_Helloworld_BlogController extends Mage_Core_Controller_Front_Action {
     public function newblogAction()
     {
         $blogpost = Mage::getModel ( 'helloworld/blogpost' );
-        $blogpost->setTitle('helloworldssssssss');
-        $blogpost->setPost('2221143535354535');
+        $blogpost->setTitle('Titlexxxxxxx');
+        $blogpost->setPost('hello world , hi ,hi ,hi ,   ,,, haha  hha ');
         $blogpost->save();
         echo "finished.";
     }
@@ -42,6 +42,25 @@ class App_Helloworld_BlogController extends Mage_Core_Controller_Front_Action {
         echo "</table>";
     }
     
+    public function testAction()
+    {
+        $mdc = Mage::getModel("helloworld/blogpost")->getCollection();
+        $mdc =$mdc->addFieldToFilter('title',array('like'=>'Title%'));
+        $sql = (string)$mdc->getSelect();
+        
+        echo "<table>";
+        foreach($mdc as $md)
+        {
+            echo "<tr>";
+            echo "<td>".$md->getId()."</td>";
+            echo "<td>".$md->getTitle()."</td>";
+            echo "<td>".$md->getPost()."</td>";
+            echo "</tr>";
+        }
+        echo "</table>";
+        
+        echo '<br/>'.$sql;
+    }
 
     
 }
