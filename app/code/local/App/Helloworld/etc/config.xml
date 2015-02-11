@@ -71,6 +71,27 @@
 
 	</global>
 
+      <adminhtml>
+          <acl>
+              <resources>
+                  <admin>
+                      <children>
+                          <system>
+                              <children>
+                                  <config>
+                                      <children>
+                                          <helloworld_options>
+                                              <title>测试权限test</title>
+                                          </helloworld_options>
+                                      </children>
+                                  </config>
+                              </children>
+                          </system>
+                      </children>
+                  </admin>
+              </resources>
+          </acl>
+      </adminhtml>
 
 
 
