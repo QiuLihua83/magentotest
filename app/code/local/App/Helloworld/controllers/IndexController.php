@@ -22,4 +22,12 @@ class App_Helloworld_IndexController extends Mage_Core_Controller_Front_Action{
         var_dump($collection_of_products->getSelect());
     }
     
+    public function blockAction()
+    {
+        echo "in block action.";
+        $this->loadLayout();
+        $this->renderLayout();
+        echo "end block action.";
+    }
+    
 }

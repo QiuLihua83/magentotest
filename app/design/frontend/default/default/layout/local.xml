@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<layout version="0.1.0">
+	<default>
+		<reference name="root">
+			<block type="page/html" name="root" output="toHtml"
+				template="helloworld/simple _page.phtml" />
+		</reference>
+	</default>
+</layout>
