@@ -14,4 +14,10 @@ class App_Helloworld_IndexController extends Mage_Core_Controller_Front_Action{
         echo 'welcome next time.';
     }
     
+    public function testAction()
+    {
+        $collection_of_products = Mage::getModel('catalog/product')->getCollection();
+        var_dump($collection_of_products->getFirstItem()->getData());
+    }
+    
 }
