@@ -2,9 +2,12 @@
 
 
 <layout version="0.1.0">
-	<default>
+	<helloworld_index_index>
 		<reference name="root">
 			<block type="page/html" name="root" output="toHtml" template="helloworld/simple _page.phtml" />
 		</reference>
-	</default>
+	</helloworld_index_index>
+	<helloworld_index_block>
+	    <update handle="helloworld_index_index"></update>
+	</helloworld_index_block>
 </layout>
