@@ -14,6 +14,9 @@ class App_Helloworld_IndexController extends Mage_Core_Controller_Front_Action{
     public  function goodbyeAction()
     {
         echo 'welcome next time.';
+        echo 'your params are:<br/>';
+        $params = $this->getRequest()->getParams();
+        var_dump($params);
     }
     
     public function testAction()
